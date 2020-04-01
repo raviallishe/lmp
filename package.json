@@ -1,0 +1,26 @@
+{
+  "name": "ravioli",
+  "version": "1.0.0",
+  "description": "illustrations",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "scss": "sass --watch app/assets/sass/lmp.scss:public/stylesheets/lmp.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raviallishe/lmp.git"
+  },
+  "keywords": [
+    "lmp"
+  ],
+  "author": "Ravi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raviallishe/lmp/issues"
+  },
+  "homepage": "https://github.com/raviallishe/lmp#readme"
+}

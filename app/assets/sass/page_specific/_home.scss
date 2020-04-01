@@ -1,158 +1,17 @@
-.page_AboutNano {
-	.CoverageDetails {
-		.BlueBg {
-			background: transparent;
-		}
-	}
+.banner {
+    display: block;
+    background: url(/assets/images/paris.jpg) no-repeat scroll;
+    background-position: center; /* Center the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+    margin: 0 -5px;
+    padding: 20px;
 
-	.Home_section {
-		padding: 0;
-
-		@include respond-to(widescreen) {
-			padding: 30px 0;
-		}
-
-		&.Testimonials {
-			padding: 30px 0;
-		}
-	}
-
-	.Accordion {
-		border-top: 1px solid $neutral-10;
-
-		.Accordion_heading {
-			margin-top: 25px;
-			line-height: 1.5;
-		}
-
-		.Accordion_body {
-
-			@include respond-to(widescreen) {
-				margin-left: 20px;	
-			}
-
-			h2 {
-				display: none;
-			}
-
-			.ContentGlance {
-				.container--fullWidthSection {
-					margin-right: -20px;
-					padding: 0 0 0 20px;
-				}
-			}
-
-		}
-	}
+    position: absolute;
+    top: 2%;
+    left: 22%;
+    height: 117px;
+    width: 61px;
 }
 
-.AboutNano {
-	padding-top: 30px;
 
-	p, ul li {
-		@include font-size($bodySize);
-		line-height: 1.5;
-	}
-}
 
-.AboutSection {
-	ul {
-		margin:30px 0;
-		
-		li {
-			margin: 5px 0;
-		}
-	}
-}
-
-.WhyNano {
-	ul {
-		li {
-			position: relative;
-			padding-left: 15px;
-			margin: 15px 0;
-
-			&::before{
-				content: "• ";
-				@include font-size($size16);
-				color: $blue-1;
-				position: absolute; left: 3px; top: -2px;
-				line-height: normal;
-			}	
-
-			&:last-child:before {
-				display: none;
-			}
-		}
-	}
-
-	.WhyNano_prepSample {
-		overflow: hidden;
-		overflow-x: scroll;
-
-		@include respond-to(widescreen) {
-			overflow: hidden;	
-		}
-	}
-}
-
-.NMBuildDetails {
-	p {
-		margin: 15px 0;
-	}
-}
-
-.page_NanoInfo {
-	.MainContent {
-		padding: 40px 0px 40px 0px;
-		.container:not(.container--fullWidthSection){
-			width: auto;
-		}
-		.AboutNanoInput{
-			width: 100%;
-		}
-
-		.DisableClick {
-			pointer-events: none;
-			opacity: 0.5;
-		}
-		.ContentGlance_stat {
-			position: relative;
-			min-width: 170px;
-			p{
-				font-size: 14px;
-				line-height: 1.5;
-			}
-			.Loader {
-				background-image: url(/assets/images/loading.gif);
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-position: center center;
-				width: 18px;
-				height: 18px;
-				margin: 0 auto;
-				display: none;
-				@include respond-to(tablet) {
-					position: absolute;
-					top: 8px;
-					left: 50%;
-					width: 40px;
-					height: 40px;
-					background-size: contain;
-				}
-			}
-			.Hide {
-				display: none;
-			}
-
-			.Show {
-				display: block;
-			}
-		}
-		.MainSearchBtn {
-			input {
-				outline: none;
-			}
-		}
-	}
-}
