@@ -1,11 +1,6 @@
-$ielt9: false !default; // !default means it will be overwritten if defined in IE specific stylesheet
 
 
-// Setup variables
-@import "setup/variables";
-
-@import "page_specific/home",
-        "page_specific/header"
-
-
+@import "v1/base",
+    "v1/layout",
+    "v1/components"
 

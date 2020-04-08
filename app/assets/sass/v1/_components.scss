@@ -1,0 +1,122 @@
+
+.illustration-items {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 2%;
+    right: 5%;
+    z-index: 300;
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform .5s;
+
+        .item-line {
+            width: 100%;
+            height: 4px;
+            background-color: green;
+            transform-origin: right;
+            transition: all .5s .5s;
+        }
+    }
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+
+.checkbox:checked ~ .illustration-items .menu {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .illustration-items .item-line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .illustration-items .item-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .illustration-items .item-line-3 {
+    transform: rotateZ(40deg);
+}
+
+
+.logo {
+    background: url(/assets/images/v1/paris.jpg) center no-repeat;
+    background-size: cover;
+    width: 123px;
+    height: 123px;
+    border: 3px solid black;
+    border-radius: 50%;
+    border-color: #ea9399;
+    @include flexLayout;
+}
+
+.menu-heading a {
+     font-family: $font-josefinSans;
+     font-size: 25px;
+     color: green;
+     text-decoration: none;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+}
+.main-name {
+     font-family: $font-nunito;
+     font-size: 40px;
+}
+
+.sub-name {
+    font-family: $font-josefinSans;
+    font-size: 30px;
+}
+
+
+.main-heading {
+    font-family: $font-dancingScript;
+    font-size: 100px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.sub-heading {
+    font-family: $font-josefinSans;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.description {
+    font-family: $font-josefinSans;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 40px;
+}
+
+.explore {
+    font-family: $font-josefinSans;
+    font-size: 20px;
+    width: 170px;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid;
+    outline: none;
+    cursor: pointer;
+    color: green;
+    transition: all .4s;
+
+    &:hover {
+        background-color: pink;
+    }
+}

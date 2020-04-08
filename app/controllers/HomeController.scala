@@ -19,6 +19,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    * a path of `/`.
    */
   def home() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.home())
+    Ok(views.html.v1.home())
   }
 }
