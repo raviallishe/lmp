@@ -1,6 +1,13 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
 
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/slideshow";
+@import "layout/products";
+@import "layout/footer";
 
-@import "v1/base",
-    "v1/layout",
-    "v1/components"
-
+@import "components/logo";
+@import "components/heading";
+@import "components/button";

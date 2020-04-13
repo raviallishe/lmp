@@ -12,33 +12,30 @@
         @* Here's where we render the page title `String`. *@
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/lmp.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/logo.png")">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans:300,400,600" rel="stylesheet">
         <link
                 rel="stylesheet"
-                href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-                integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+                href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+                integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
                 crossorigin="anonymous"
         />
-        <link href="http://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700" rel="stylesheet">
-
     </head>
     <body>
 
-        <nav class="navbar">
-            @navbar()
-        </nav>
+    <div class="container">
+        <!--header-->
+        @header()
+        <!--end of header-->
 
-        <header class="header">
-            @header()
-        </header>
+        <!--content-->
+        @content
+        <!--end of content-->
 
-        <section id="about-us" class="about-us">
-            @aboutUs()
-        </section>
-
-        <footer>
-            @footer()
-        </footer>
+        <!--footer-->
+        @footer()
+        <!--end of footer-->
+    </div>
         @* And here's where we render the `Html` object containing
          * the page content. *@
         @content

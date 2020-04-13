@@ -1,0 +1,5 @@
+.first-nav {
+    grid-column: 3 / 8;
+    grid-row: 1 / 2;
+    @include navigation;
+}
