@@ -1,6 +1,6 @@
 .footer {
     grid-column: 1 / -1;
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
     @include flexPosition(space-around);
     padding: 5rem 0;
     border-top: .1rem solid color(primary);

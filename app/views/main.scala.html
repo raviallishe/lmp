@@ -28,6 +28,10 @@
         @header()
         <!--end of header-->
 
+        <!--lmp inf-->
+        @lmp()
+        <!--end of lmp inf-->
+
         <!--content-->
         @content
         <!--end of content-->
@@ -36,9 +40,6 @@
         @footer()
         <!--end of footer-->
     </div>
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
-        @content
 
       <script src="@routes.Assets.versioned("javascripts/app.js")" type="text/javascript"></script>
     </body>

@@ -16,14 +16,5 @@ class HeaderViewSpec extends Specification {
       getHtml().select(".first-nav-item").get(3).text mustEqual "About"
       getHtml().select(".first-nav-item").get(4).text mustEqual "Contact Us"
     }
-
-    "have a logo" in {
-      getHtml().select(".logo img").toString mustEqual "<img src=\"/assets/images/logo.png\" class=\"logo-img\">"
-    }
-
-    "have a company heading" in {
-      getHtml().select(".heading h1").toString mustEqual "<h1 class=\"heading-text\">Love Me Paris</h1>"
-    }
   }
-
 }
