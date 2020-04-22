@@ -1,11 +1,13 @@
 
 
 $colors: (
-    primary: #333,
+    primary: green,
     secondary: #ffe,
     tertiary: #f2f0f1,
     quaternary: #f5b149,
-    lightpink: lavenderblush
+    lightpink: lavenderblush,
+    red: red,
+    white: white
 );
 
 @function color($color-name) {
@@ -14,6 +16,8 @@ $colors: (
 
 
 $font-sizes: (
+    xxxl: 12rem,
+    xxl: 6rem,
     xl: 3rem,
     lg: 2.5rem,
     md: 2rem,

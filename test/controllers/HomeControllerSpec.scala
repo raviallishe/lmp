@@ -21,7 +21,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Love Me Paris")
+      contentAsString(home) must include ("Love me Paris")
     }
 
     "render the home page from the application" in {
@@ -30,7 +30,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Love Me Paris")
+      contentAsString(home) must include ("Love me Paris")
     }
 
     "render the home page from the router" in {
@@ -39,7 +39,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Love Me Paris")
+      contentAsString(home) must include ("Love me Paris")
     }
   }
 }

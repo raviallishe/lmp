@@ -10,10 +10,10 @@ class LmpViewSpec extends Specification {
 
     "have a logo" in {
       getHtml().select(".logo img").toString mustEqual "<img src=\"/assets/images/logo.png\" class=\"logo-img\">"
-    }
+    }.pendingUntilFixed("feature is commented")
 
     "have a company heading" in {
-      getHtml().select(".heading h1").toString mustEqual "<h1 class=\"heading-text\">Love Me Paris</h1>"
+      getHtml().select(".heading h1").toString mustEqual "<h1 class=\"main-heading\">Love me Paris</h1>"
     }
   }
 

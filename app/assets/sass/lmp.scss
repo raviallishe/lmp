@@ -1,13 +1,16 @@
+
+@import "fonts/fonts";
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "base/base";
 
 @import "layout/header";
-@import "layout/navigation";
-@import "layout/lmp";
+@import "layout/logo";
 @import "layout/slideshow";
 @import "layout/products";
 @import "layout/footer";
+@import "layout/contact-us";
 
 @import "components/logo";
 @import "components/heading";

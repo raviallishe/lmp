@@ -1,0 +1,27 @@
+
+.contact-us {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    .position {
+        display: flex;
+        img {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            width: 50vw;
+            height: 70vh;
+        }
+
+        .right {
+            background: white;
+            width: 50vw;
+            height: 70vh;
+
+            h1 {
+                font-family: 'Alice';
+                font-size: size(xl);
+                text-align: start;
+            }
+        }
+    }
+}

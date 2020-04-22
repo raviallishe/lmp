@@ -10,11 +10,11 @@ class HeaderViewSpec extends Specification {
 
     "have different header menu" in {
       getHtml().select(".first-nav-item").size mustEqual 5
-      getHtml().select(".first-nav-item").get(0).text mustEqual "Blog"
-      getHtml().select(".first-nav-item").get(1).text mustEqual "Shop"
-      getHtml().select(".first-nav-item").get(2).text mustEqual "Comission"
-      getHtml().select(".first-nav-item").get(3).text mustEqual "About"
-      getHtml().select(".first-nav-item").get(4).text mustEqual "Contact Us"
+      getHtml().select(".first-nav-item").get(0).text mustEqual "BLOG"
+      getHtml().select(".first-nav-item").get(1).text mustEqual "SHOP"
+      getHtml().select(".first-nav-item").get(2).text mustEqual "COMMISSION"
+      getHtml().select(".first-nav-item").get(3).text mustEqual "ABOUT"
+      getHtml().select(".first-nav-item").get(4).text mustEqual "CONTACT"
     }
   }
 }
