@@ -11,7 +11,7 @@ html {
 .container {
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-    grid-template-rows: repeat(5, min-content);
+    grid-template-rows: repeat(7, min-content);
     grid-row-gap: 1.6rem;
     background-color: color(lightpink);
 }

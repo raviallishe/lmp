@@ -23,24 +23,29 @@
     </head>
     <body>
 
-    <div class="container">
-        <!--header-->
-        @header()
-        <!--end of header-->
+        <div class="container">
+            <!--header-->
+            @header()
+            <!--end of header-->
 
-        <!--lmp inf-->
-        @lmp()
-        <!--end of lmp inf-->
+            <!--lmp inf-->
+            @lmp()
+            <!--end of lmp inf-->
 
-        <!--content-->
-        @content
-        <!--end of content-->
+            <!--content-->
+            @content
+            <!--end of content-->
 
-        <!--footer-->
-        @footer()
-        <!--end of footer-->
-    </div>
+            <!--footer-->
+            @footer()
+            <!--end of footer-->
+        </div>
 
-      <script src="@routes.Assets.versioned("javascripts/app.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/lmp-bundle.js")" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="assets/javascripts/jquery.hislide.js" ></script>
+        <script>
+                $('.slide').hiSlide();
+        </script>
     </body>
 </html>

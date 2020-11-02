@@ -5,6 +5,11 @@
   font-weight: normal;
   font-style: normal;
 }
+.card-img, .card-overlay {
+  max-width: 100%;
+  height: 100%;
+}
+
 * {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
@@ -18,7 +23,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-  grid-template-rows: repeat(5, min-content);
+  grid-template-rows: repeat(7, min-content);
   grid-row-gap: 1.6rem;
   background-color: lavenderblush;
 }
@@ -33,31 +38,6 @@ html {
   position: sticky;
   top: 0;
   z-index: 300;
-}
-.header .first-nav {
-  grid-column: 2/8;
-  grid-row: 1/2;
-}
-.header .first-nav-list {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
-  padding: 2rem;
-}
-.header .first-nav-item {
-  list-style: none;
-}
-.header .first-nav-link {
-  font-family: "Alice";
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  font-size: 1.8rem;
-  transition: all 0.3s;
-}
-.header .first-nav-link:hover {
-  color: green;
 }
 
 .lmp {
@@ -75,10 +55,10 @@ html {
 
 .slideshow {
   grid-column: 1/-1;
-  grid-row: 3/4;
+  grid-row: 4/5;
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 }
 .slideshow-slide {
   position: absolute;
@@ -150,7 +130,7 @@ html {
 }
 .products {
   grid-column: 1/-1;
-  grid-row: 4/5;
+  grid-row: 6/7;
 }
 .products-heading {
   margin: 5rem 0;
@@ -225,7 +205,7 @@ html {
 
 .footer {
   grid-column: 1/-1;
-  grid-row: 5/6;
+  grid-row: 7/8;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -370,6 +350,54 @@ html {
   text-align: start;
 }
 
+.slide {
+  grid-column: 2/10;
+  grid-row: 3/4;
+  position: relative;
+  width: 100%;
+  height: 76vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  grid-column: 2/10;
+  grid-row: 5/6;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header .first-nav {
+  grid-column: 2/8;
+  grid-row: 1/2;
+}
+.header .first-nav-list {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  padding: 2rem;
+}
+.header .first-nav-item {
+  list-style: none;
+}
+.header .first-nav-link {
+  font-family: "Alice";
+  font-weight: bold;
+  color: green;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.header .first-nav-link:hover {
+  color: green;
+}
+
 /*.logo {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
@@ -386,6 +414,7 @@ html {
   font-size: 12rem;
   font-weight: normal;
   letter-spacing: 0.5rem;
+  text-decoration: none;
 }
 .heading .sub-heading {
   font-family: "Alice";
@@ -455,6 +484,132 @@ html {
 .btn .arrow-line-3 {
   width: 1rem;
   transform: rotateZ(-45deg);
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  transition: all 0.6s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.hi-slide .hi-prev {
+  left: -60px;
+}
+
+.hi-slide .hi-prev::before {
+  content: "<";
+}
+
+.hi-slide .hi-next {
+  right: -60px;
+}
+
+.hi-slide .hi-next::before {
+  content: ">";
+}
+
+.hi-slide > ul {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  align-text: center;
+}
+
+.hi-slide > ul > li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 146px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #fff;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hi-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.card {
+  width: 33.3333%;
+  height: 25vw;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(0, 128, 0, 0.6);
+  color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: left 0.7s;
+}
+.card-overlay-heading {
+  font-family: "Alice";
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.card-overlay-paragraph {
+  font-family: "Alice";
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: green;
+  background-color: white;
+  font-family: "Alice";
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid green;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+.card-img {
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=lmp.css.map */
